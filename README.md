@@ -3,5 +3,3 @@
 Thuc hanh dieu huong dinh tuyen
 
 ## Getting started
-
-abcxyz
