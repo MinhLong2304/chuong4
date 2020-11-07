@@ -24,15 +24,17 @@ class FirstScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          child: Text('Launch screen'),
-          onPressed: () {
-            // Navigate to the second screen using a named route.
-            Navigator.pushNamed(context, '/second');
-          },
-        ),
-      ),
-    );
-  }
+                  child: Text('Launch screen'),
+                  onPressed: () {
+                    // Navigate to the second screen using a named route.
+                    Navigator.pushNamed(context, '/second');
+                  },
+                ),
+              ),
+            );
+          }
+        
+          ElevatedButton({Text child, Null Function() onPressed}) {}
 }
 
 class SecondScreen extends StatelessWidget {
@@ -44,14 +46,16 @@ class SecondScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
-            // Navigate back to the first screen by popping the current route
-            // off the stack.
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
+                  onPressed: () {
+                    // Navigate back to the first screen by popping the current route
+                    // off the stack.
+                    Navigator.pop(context);
+                  },
+                  child: Text('Go back!'),
+                ),
+              ),
+            );
+          }
+        
+          ElevatedButton({Null Function() onPressed, Text child}) {}
 }

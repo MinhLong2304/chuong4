@@ -16,17 +16,19 @@ class FirstRoute extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          child: Text('Open route'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SecondRoute()),
+                  child: Text('Open route'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SecondRoute()),
+                    );
+                  },
+                ),
+              ),
             );
-          },
-        ),
-      ),
-    );
-  }
+          }
+        
+          ElevatedButton({Text child, Null Function() onPressed}) {}
 }
 
 class SecondRoute extends StatelessWidget {
@@ -38,12 +40,14 @@ class SecondRoute extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text('Go back!'),
+                ),
+              ),
+            );
+          }
+        
+          ElevatedButton({Null Function() onPressed, Text child}) {}
 }

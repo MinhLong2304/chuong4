@@ -56,43 +56,45 @@ class HomeScreen extends StatelessWidget {
             // A button that navigates to a named route that. The named route
             // extracts the arguments by itself.
             ElevatedButton(
-              child: Text("Navigate to screen that extracts arguments"),
-              onPressed: () {
-                // When the user taps the button, navigate to a named route
-                // and provide the arguments as an optional parameter.
-                Navigator.pushNamed(
-                  context,
-                  ExtractArgumentsScreen.routeName,
-                  arguments: ScreenArguments(
-                    'Extract Arguments Screen',
-                    'This message is extracted in the build method.',
+                          child: Text("Navigate to screen that extracts arguments"),
+                          onPressed: () {
+                            // When the user taps the button, navigate to a named route
+                            // and provide the arguments as an optional parameter.
+                            Navigator.pushNamed(
+                              context,
+                              ExtractArgumentsScreen.routeName,
+                              arguments: ScreenArguments(
+                                'Extract Arguments Screen',
+                                'This message is extracted in the build method.',
+                              ),
+                            );
+                          },
+                        ),
+                        // A button that navigates to a named route. For this route, extract
+                        // the arguments in the onGenerateRoute function and pass them
+                        // to the screen.
+                        ElevatedButton(
+                          child: Text("Navigate to a named that accepts arguments"),
+                          onPressed: () {
+                            // When the user taps the button, navigate to a named route
+                            // and provide the arguments as an optional parameter.
+                            Navigator.pushNamed(
+                              context,
+                              PassArgumentsScreen.routeName,
+                              arguments: ScreenArguments(
+                                'Accept Arguments Screen',
+                                'This message is extracted in the onGenerateRoute function.',
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
                   ),
                 );
-              },
-            ),
-            // A button that navigates to a named route. For this route, extract
-            // the arguments in the onGenerateRoute function and pass them
-            // to the screen.
-            ElevatedButton(
-              child: Text("Navigate to a named that accepts arguments"),
-              onPressed: () {
-                // When the user taps the button, navigate to a named route
-                // and provide the arguments as an optional parameter.
-                Navigator.pushNamed(
-                  context,
-                  PassArgumentsScreen.routeName,
-                  arguments: ScreenArguments(
-                    'Accept Arguments Screen',
-                    'This message is extracted in the onGenerateRoute function.',
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+              }
+            
+              ElevatedButton({Text child, Null Function() onPressed}) {}
 }
 
 // A Widget that extracts the necessary arguments from the ModalRoute.
